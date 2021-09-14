@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>simple pic slider </title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">image slider</h1>
+    </header>
+
+    <section class="container">
+        <div class="w-100 text-center">
+            <img  id="imgSlider" src="img/player-1.png" width="50%" alt="">
+        </div>
+
+    </section>
+
+    <script>
+     
+     const allPic=[
+         "img/player-1.png",
+         "img/player-2.png",
+         "img/player-3.png",
+         "img/player-4.png",
+         "img/player-5.png",
+         "img/player-6.png",
+         "img/player-7.png",
+         "img/player-8.png",
+         "img/player-9.png",
+         "img/player-10.png",
+         "img/player-11.png",
+         "img/player-12.png"
+         
+
+     ]
+     
+     let indexnmbr=0;
+      let imgSlider= document.getElementById("imgSlider");
+     setInterval(()=>{
+
+        if(indexnmbr>=allPic.length){
+            indexnmbr=0;
+        }
+         slider=allPic[indexnmbr];
+        imgSlider.setAttribute('src',slider);
+        indexnmbr++;
+         console.log(indexnmbr);
+
+     },2000)
+
+
+    </script>
+</body>
+</html>
